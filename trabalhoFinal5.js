@@ -23,3 +23,22 @@ console.log(resultado3);
 //Questão 2: Manipulação de Strings.
 //1
 
+//Questão 3: Objetos e Métodos.
+function Pessoa(nome, idade, profissao) {
+    this.nome = nome
+    this.idade = idade
+    this.profissao = profissao
+    this.apresentar = `Nome: ${this.nome} \nIdade: ${this.idade} \nProfisssao: ${this.profissao}`
+}
+function cadastro(){
+    let nome = leitor.question("informe o seu nome: ")
+    let idade = leitor.questionInt("informe a sua idade: ")
+    let profissao = leitor.question("informe sua profissao: ")
+    let Pessoas = new Pessoa(nome, idade, profissao)
+    return Pessoas
+}
+
+let nomedois = cadastro()
+
+console.log(nomedois.apresentar);
+
